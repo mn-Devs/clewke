@@ -1,0 +1,81 @@
+.toolbar {
+  width: 100%;
+  height: 32px;
+  background-color: #000;
+  display: flex;
+  
+}
+
+.toolbar > .button {
+  width: 26px;
+  height: 26px;
+  display: inline-block;
+  transition: 0.2s;
+  background-size: 24px auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  align-self: center;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.toolbar > .button:hover {
+  cursor: pointer;
+}
+
+.toolbar > .button.disable {
+  pointer-events: none;
+  opacity: 0.33;
+}
+
+.toolbar > .omnibar {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 26px;
+  border: 0px solid white;
+  border-radius: 25px;
+  display: inline-block;
+  font-size: 13px;
+  align-self: center;
+  flex: 1;
+  outline: none;
+  padding-left: 8px;
+  padding-right: 8px;
+  background-color: #dddddd;
+}
+
+.toolbar > .omnibar:hover {
+cursor: auto;
+}
+
+.bookmarkmenu, .toolbarmenu {
+  padding: 0;
+  background-color: #000;
+  position: relative;
+  color:white; 
+  width: max-content;
+  top: 100%;
+  right: 0px;
+  float: right;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16), 0 3px 6px 0 rgba(0, 0, 0, 0.32);
+  display: none;
+  outline: none;
+}
+
+.bookmarkmenu.exec, .toolbarmenu.exec {
+  display: block;
+}
+
+.menuitem {
+  width: calc(100% - 70px);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  padding: 5px 20px;
+  padding-right: 50px;
+  user-select: none;
+  cursor: pointer;
+}
+
+
+

@@ -1,0 +1,140 @@
+.tabbar {
+  background-color: #333333;
+
+  width: 100%;
+  height: 32px;
+  overflow: hidden;
+  -webkit-app-region: drag;
+
+}
+
+.addtabbutton {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  top: -4px;
+  left: 4px;
+  border-radius: 25px;
+  display: inline-block;
+  transition: 0.2s;
+  background-image: url('../images/add.svg');
+  background-size: cover;
+  background-color: #4d4d4d;
+  -webkit-app-region: no-drag;
+}
+
+.addtabbutton:hover {
+  cursor: pointer;
+}
+
+.tab {
+  width: 250px;
+  height: 100%;
+  display: inline-block;
+  transition: 0.2s;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  -webkit-app-region: no-drag;
+  overflow: hidden;
+  color: white;
+
+}
+
+.tab.active {
+  background-color: #000;
+}
+
+.tab:not(.active):hover {
+  background-color: #1a1a1a;
+}
+
+.favicon {
+  width: 16px;
+  height: 16px;
+  align-self: center;
+  position: relative;
+  top: 8px;
+  left: 8px;
+  float: left;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-app-region: no-drag;
+}
+
+.title {
+  height: 32px;
+  line-height: 32px;
+  width: calc(100% - 16px - 8px - 16px - 1px - 8px - 10px);
+  position: relative;
+  left: calc(16px);
+  float: left;
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  user-select: none;
+  -webkit-app-region: no-drag;
+}
+
+.tabclosebutton {
+  width: 16px;
+  height: 16px;
+  align-self: center;
+  position: relative;
+  top: 7px;
+  border-radius: 25%;
+  right: 8px;
+  float: right;
+  background: url('../images/close.svg');
+  background-size: 16px auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 0.2s;
+  -webkit-app-region: no-drag;
+  
+}
+
+.tabclosebutton:hover {
+  cursor: pointer;
+}
+
+.tab:not(:hover) > .tabclosebutton {
+  display: block;
+}
+
+.tabcontainer {
+  width: 100%;
+  height: 100%;
+  -webkit-app-region: no-drag;
+
+
+}
+
+.tabcontainer > .widget {
+  width: 100%;
+  height: calc(100% - 32px);
+  background-color: #000;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.action-btn{
+  float: right;
+  width: 20px;
+  height: 20px;
+  -webkit-app-region: no-drag;
+  margin: 2px 2px 2px 2px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+#min-btn{
+  background-color: #EFCA00;
+}
+
+#max-btn{
+  background-color: #3FC772;
+}
+
+#close-btn{
+  background-color: #E7524B;
+}

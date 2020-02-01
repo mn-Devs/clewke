@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="./styles/tabs.css" >
+    <link rel="stylesheet" href="./styles/toolbar.css" >
+    <script src="./scripts/tabs.js"></script>
+    <script src="./scripts/toolbar.js"></script>
+    <title>Clewke</title>
+    <script src="./scripts/webview.js"></script>
+    <style>
+      html, body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        background-color: none;
+      }
+
+      #root {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id='root'></div>
+    <script>
+      const remote = require('electron').remote
+      
+      const root = document.getElementById('root')
+
+      const tabContainer = new TabContainer()
+      root.appendChild(tabContainer.element)
+
+      window.onload = () => {
+        tabContainer.tabbar.addTabButtonElement.click()
+      }
+    </script>
+  </body>
+
+
+
+  <script>
+    (function () {
+        // Retrieve remote BrowserWindow
+        const {BrowserWindow} = require('electron').remote
+
+        function init() {
+            // Minimize task
+            document.getElementById("min-btn").addEventListener("click", (e) => {
+                var window = BrowserWindow.getFocusedWindow();
+                window.minimize();
+            });
+
+            // Maximize window
+            document.getElementById("max-btn").addEventListener("click", (e) => {
+                var window = BrowserWindow.getFocusedWindow();
+                if(window.isMaximized()){
+                    window.unmaximize();
+                }else{
+                    window.maximize();
+                }
+            });
+
+            // Close app
+            document.getElementById("close-btn").addEventListener("click", (e) => {
+                var window = BrowserWindow.getFocusedWindow();
+                window.close();
+            });
+        };
+
+        document.onreadystatechange =  () => {
+            if (document.readyState == "complete") {
+                init();
+            }
+        };
+    })();
+    </script>
+</html>

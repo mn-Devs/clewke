@@ -1,0 +1,42 @@
+{
+    "name": "clewke",
+    "version": "1.0.0",
+    "description": "Clewke, Browsing the web made easy",
+    "main": "index.js",
+    "scripts": {
+        "start": "electron .",
+        "electron-toolkit": "electron ./node_modules/electron-toolkit"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "discord-rich-presence": "0.0.8"
+    },
+    "devDependencies": {
+        "electron": "^4.2.12",
+        "electron-builder": "^22.2.0",
+        "electron-toolkit": "^1.0.24"
+    },
+    "build": {
+        "appId": "com.mndevs.clewke",
+        "copyright": "Copyright © 2020 ",
+        "productName": "clewke",
+        "electronVersion": "4.2.12",
+        "asar": true,
+        "directories": {
+            "app": "D:\\Users\\Documenten\\Websites\\Electron\\github rips\\Crusta-electronic-master",
+            "output": "dist"
+        },
+        "win": {
+            "target": [
+                {
+                    "target": "nsis",
+                    "arch": [
+                        "ia32"
+                    ]
+                }
+            ]
+        }
+    }
+}

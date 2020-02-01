@@ -8,9 +8,12 @@ You can download the source  code or downwload the installer of the portable ver
 
 # Install Clewke
 
-
+You can get the portable version or the installer via the link bellow:
+https://github.com/mn-Devs/clewke/releases
 
 #  Decompile Clewke
+
+You can decompile Clewke with only 3 commands:
 
 ```
 git clone https://github.com/mn-Devs/clewke.git

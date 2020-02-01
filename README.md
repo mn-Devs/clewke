@@ -13,10 +13,11 @@ https://github.com/mn-Devs/clewke/releases
 
 #  Decompile Clewke
 
-You can decompile Clewke with only 3 commands:
+You can decompile Clewke with only 4 commands:
 
 ```
 git clone https://github.com/mn-Devs/clewke.git
+cd clewke
 npm install
 npm start
 ```
